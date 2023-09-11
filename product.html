@@ -28,19 +28,18 @@
     <div class="container header__layout">
       <a class="logo header__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
-          <img class="logo__img" src="./img/logo/logo-mobile.svg" alt="Логотип Drink2Go" width="32" height="36">
+          <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo_tablet.svg">
+          <img class="logo__img" src="./img/logo/logo_mobile.svg" alt="Логотип Drink2Go" width="32" height="36">
         </picture>
         <span class="logo__description">Интернет-магазин
           кофейных напитков</span>
       </a>
-
       <nav class="site-navigation site-navigation--header site-navigation--no-js">
         <button class="site-navigation__toggle" type="button" aria-label="Раскрыть/Свернуть меню"></button>
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
-            <a href="./index.html" class="header__link site-navigation__link site-navigation__link--active">Главная</a>
+            <a class="header__link site-navigation__link site-navigation__link--active">Главная</a>
           </li>
           <li class="site-navigation__item">
             <a class="header__link site-navigation__link" href="#!">Каталог</a>
@@ -56,12 +55,14 @@
       <div class="user-navigation user-navigation--header">
         <ul class="user-navigation__list">
           <li class="user-navigation__item">
-            <a href="#!" class="header__link user-navigation__link user-navigation__link--profile">
+            <a href="#!" class="header__link user-navigation__link user-navigation__link--profile"
+              aria-label="Войти в личный кабинет">
               <span class="user-navigation__link-text">Войти</span>
             </a>
           </li>
           <li class="user-navigation__item">
-            <a href="#!" class="header__link user-navigation__link user-navigation__link--cart">
+            <a href="#!" class="header__link user-navigation__link user-navigation__link--cart"
+              aria-label="Ваша корзина">
               <span class="user-navigation__link-text">Корзина</span>
             </a>
           </li>
@@ -69,6 +70,7 @@
       </div>
     </div>
   </header>
+
   <main class="page__main">
     <div class="container">
       <h1 class="title page__title-dev">Страница в разработке</h1>
@@ -80,10 +82,10 @@
       <div class="footer__header">
         <a href="#!" class="logo footer__logo">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo/logo-desktop.svg">
-            <img class="logo__img" src="./img/logo/logo-tablet.svg" alt="Логотип Drink2Go" width="82" height="36">
+            <source media="(min-width: 768px)" srcset="img/logo/logo_desktop.svg">
+            <img class="logo__img" src="./img/logo/logo_tablet.svg" alt="Логотип Drink2Go" width="82" height="36">
           </picture>
-          <span class="logo__description">Интернет-магазин
+          <span class="logo__description logo__description--footer">Интернет-магазин
             кофейных напитков</span>
         </a>
         <ul class="footer__social social">
