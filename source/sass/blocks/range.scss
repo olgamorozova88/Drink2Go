@@ -1,0 +1,165 @@
+.range__target {
+  margin: 0 0 24px;
+  padding-right: 24px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.range__target[disabled] .range__connect {
+  background-color: $base-grey;
+}
+
+.range__target[disabled] .range__handle {
+  border-color: $base-grey;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $base-grey;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.range__base {
+  height: 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    bottom: 11px;
+    left: 0;
+    right: -24px;
+    background-color: $light-grey;
+  }
+}
+
+.range__connect {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  height: 4px;
+  background-color: $base-primary;
+  transform-origin: 0 0;
+}
+
+.range__origin {
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.range__handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: 2px solid $base-primary;
+
+  &::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $primary-opacity;
+    top: 2px;
+    left: 2px;
+    transition: 0.2s ease-in;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active::before {
+    background-color: $base-primary;
+  }
+}
+
+.range__price {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+  }
+}
+
+.range__price-input {
+  appearance: textfield;
+  width: 118px;
+  padding: 6px 8px;
+  border: 2px solid $base-primary;
+  border-radius: 4px;
+  background-color: $base-white;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-darker;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.range__price-input[disabled] {
+  background-color: $bg-light;
+  border-color: $light-grey;
+}

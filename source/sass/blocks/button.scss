@@ -1,0 +1,51 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  background-color: $base-primary;
+  color: $base-white;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &--secondary {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+
+  &--secondary:hover,
+  &--secondary:focus {
+    color: $base-white;
+  }
+}
+
+.button[disabled] {
+  background-color: $base-grey;
+  color: $base-white;
+  cursor: not-allowed;
+
+  &:hover,
+  &:focus {
+    background-color: $base-grey;
+    color: $base-primary;
+  }
+}

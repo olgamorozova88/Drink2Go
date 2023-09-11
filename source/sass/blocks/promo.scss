@@ -1,0 +1,126 @@
+.promo__card {
+  height: auto;
+  padding: 20px 20px 60px;
+  display: grid;
+  gap: 10px;
+
+  &--flat-white {
+    background-color: $bg-flat-white;
+  }
+
+  &--lavender-latte {
+    background-color: $bg-lavender-latte;
+  }
+
+  &--espresso {
+    background-color: $bg-esspresso;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 80px;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 30px calc(50% - 615px) 84px;
+  }
+}
+
+.promo__picture {
+  @media (min-width: $tablet-width) {
+    order: 2;
+    height: 228px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    height: auto;
+  }
+}
+
+.promo__picture img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.promo__content {
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.promo__title {
+  margin: 0 0 10px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.72px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+    letter-spacing: 1.12px;
+  }
+}
+
+.promo__description {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.promo__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 8px;
+    justify-content: start;
+  }
+}
+
+.promo__old-price {
+  display: block;
+  margin-right: 6px;
+  margin-top: 2px;
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+}
+
+.promo__new-price {
+  display: block;
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}

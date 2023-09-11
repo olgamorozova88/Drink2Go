@@ -1,0 +1,115 @@
+.site-navigation--header {
+  @media (max-width: $mobile-max-width) {
+    order: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+  }
+}
+
+.site-navigation__toggle {
+  display: none;
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+    padding: 24px 22px;
+    margin: 0;
+    background-color: $base-white;
+    border: none;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 12px;
+      margin: auto;
+      background-color: currentColor;
+      mask-image: url("../../img/icons/stack.svg#menu");
+    }
+  }
+}
+
+.site-navigation--no-js {
+  @media (max-width: $mobile-max-width) {
+    grid-column: 1/-1;
+  }
+}
+
+.site-navigation--no-js .site-navigation__toggle {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.site-navigation--no-js .site-navigation__list {
+  @media (max-width: $mobile-max-width) {
+    position: static;
+    display: block;
+    margin-left: -20px;
+  }
+}
+
+.site-navigation--open .site-navigation__toggle {
+  @media (max-width: $mobile-max-width) {
+    padding: 24px;
+
+    &::before {
+      width: 12px;
+      mask-image: url("../../img/icons/stack.svg#menu_close");
+    }
+  }
+}
+
+.site-navigation--open .site-navigation__list {
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 2;
+  }
+}
+
+.site-navigation__list {
+  display: none;
+  background-color: $base-white;
+  border-top: 1px solid $primary-opacity;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.site-navigation__link {
+  padding: 20px 20px;
+  border-bottom: 1px solid $primary-opacity;
+  transition: box-shadow 0.2s ease-in;
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      color: $base-primary;
+      box-shadow: 0 -5px 0 -2px $base-primary inset;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+    border-bottom: none;
+  }
+}

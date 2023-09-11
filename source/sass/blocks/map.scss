@@ -1,0 +1,29 @@
+.map {
+  width: 100%;
+  min-height: 420px;
+  background-image: url("../../img/map/map_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map/map_mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 480px;
+    background-image: url("../../img/map/map_tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map_tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+    background-image: url("../../img/map/map_desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map_desktop@2x.png");
+    }
+  }
+}
